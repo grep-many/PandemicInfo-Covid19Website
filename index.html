@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PandemicInfo | Covid-19</title>
+  <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" media="screen and (max-width:1300px)" href="./styles/phone.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header>
+    <img src="./img/coro.png" alt="">
+
+    <input type="checkbox" id="menu">
+    <label for="menu" class="menu">
+        <ion-icon name="menu"></ion-icon>
+        <ion-icon name="close"></ion-icon>
+    </label>
+
+    </div>
+    <nav>
+      <li class="item"><a href="#main">Home</a></li>
+      <li class="item"><a href="#info">About</a></li>
+      <li class="item"><a href="https://mohfw.gov.in/" target="_blank">MoHFW Website</a></li>
+      <li class="item"><a href="https://www.google.com/maps/search/hospitals near me" target="_blank">Hospitals</a></li>
+      <li class="item"><a href="#contact">Contact us</a></li>
+    </nav>
+  </header>
+
+  <section id="main">
+    <div id="map"></div>
+  </section>
+
+  <section id="info">
+    <h1>Covid-19</h1>
+    <div class="info">
+      <p>COVID-19, caused by the novel coronavirus SARS-CoV-2, emerged in late 2019 and rapidly became a global
+        pandemic. The virus was first identified in Wuhan, China, and quickly spread to nearly every country,
+        overwhelming healthcare systems, disrupting economies, and leading to widespread social and political upheaval.
+        COVID-19 is primarily transmitted through respiratory droplets when an infected person coughs, sneezes, or
+        talks, and it can also spread by touching surfaces contaminated with the virus and then touching the face. The
+        virus's high transmission rate, combined with its ability to cause severe illness, especially in older adults
+        and those with underlying health conditions, contributed to its rapid spread and significant impact worldwide.
+
+      <p>Symptoms of COVID-19 vary widely, ranging from mild to severe, and can include fever, cough, shortness of
+        breath, fatigue, body aches, loss of taste or smell, sore throat, congestion, and more. Severe cases can lead to
+        pneumonia, acute respiratory distress syndrome (ARDS), organ failure, and death. The variability in symptoms and
+        severity, as well as the potential for asymptomatic spread, made controlling the virus particularly challenging.
+      </p><br>
+
+      <p>Governments around the world implemented various measures to curb the spread of COVID-19, including lockdowns,
+        travel restrictions, social distancing guidelines, mask mandates, and testing and contact tracing efforts. These
+        measures were essential in slowing the spread of the virus, protecting vulnerable populations, and preventing
+        healthcare systems from being overwhelmed. However, they also led to significant economic and social
+        disruptions, with millions of people losing their jobs, businesses closing, and education systems being forced
+        to adapt to remote learning.</p><br>
+
+      <p>The scientific community mobilized quickly to understand the virus and develop effective treatments and
+        vaccines. By early 2021, several vaccines had been developed, tested, and authorized for emergency use,
+        including those developed by Pfizer-BioNTech, Moderna, and AstraZeneca. These vaccines use innovative
+        technologies, such as mRNA, to prompt the body's immune system to recognize and fight the virus. The rollout of
+        vaccination campaigns was a critical step in controlling the pandemic, although challenges such as vaccine
+        distribution, public hesitancy, and the emergence of new variants of the virus continued to pose significant
+        obstacles.</p><br>
+
+      <p>The impact of COVID-19 on global health has been profound, with millions of lives lost and many more suffering
+        from long-term effects, often referred to as "long COVID." The pandemic has also exposed and exacerbated
+        existing inequalities, with marginalized communities being disproportionately affected both in terms of health
+        outcomes and economic impact. In many countries, the pandemic highlighted the need for stronger public health
+        systems, better preparedness for future pandemics, and more equitable access to healthcare.</p><br>
+
+      <p>The economic impact of COVID-19 has been severe, with many countries entering recessions due to lockdowns,
+        reduced consumer spending, and disruptions to global trade and supply chains. Governments responded with various
+        fiscal and monetary policies, including stimulus packages, unemployment benefits, and business support programs,
+        to mitigate the economic damage. However, the long-term economic consequences of the pandemic remain uncertain,
+        with concerns about debt levels, inflation, and the potential for uneven recovery between different sectors and
+        regions.</p><br>
+
+      <p>COVID-19 also had a significant impact on education, with schools and universities around the world forced to
+        close or shift to remote learning. This transition was challenging for both students and educators, particularly
+        in areas with limited access to technology or the internet. The pandemic has highlighted the digital divide and
+        the need for more resilient and inclusive education systems that can adapt to future disruptions.</p><br>
+
+      <p>Socially, the pandemic has led to increased isolation, mental health challenges, and changes in how people
+        interact. Lockdowns and social distancing measures limited in-person contact, leading many to rely on digital
+        communication tools to stay connected with loved ones, work, and participate in social activities. While these
+        tools have been invaluable, they cannot fully replace the benefits of face-to-face interaction, and many people
+        have reported feelings of loneliness, anxiety, and depression during the pandemic.</p><br>
+
+      <p>The response to COVID-19 has varied widely between countries, with some implementing strict measures early on
+        and others taking a more relaxed approach. These differences have led to varying outcomes in terms of infection
+        rates, mortality, and economic impact. The pandemic has also been a test of global cooperation, with countries
+        sharing information, resources, and expertise, while also facing challenges such as vaccine nationalism and
+        competition for limited supplies of medical equipment.</p><br>
+
+      <p>The emergence of new variants of SARS-CoV-2, such as the Delta and Omicron variants, has posed additional
+        challenges in controlling the pandemic. These variants are more transmissible and, in some cases, may partially
+        evade immunity from previous infection or vaccination. This has led to renewed efforts to increase vaccination
+        rates, develop booster doses, and continue public health measures to prevent further spread.</p><br>
+
+      <p>Looking ahead, the world faces the challenge of managing COVID-19 as it becomes an endemic virus, meaning it
+        will continue to circulate in the population but at lower levels than during the pandemic's peak. This will
+        require ongoing surveillance, vaccination efforts, and public health measures to prevent outbreaks, particularly
+        in areas with low vaccination rates or vulnerable populations. There is also a need to address the long-term
+        effects of the pandemic on mental health, education, and the economy, as well as to strengthen global
+        preparedness for future pandemics.</p><br>
+
+      <p>The COVID-19 pandemic has been a defining event of the 21st century, reshaping societies, economies, and the
+        global health landscape. It has highlighted the importance of science, public health, and international
+        cooperation in addressing global challenges. While the pandemic has caused immense suffering and loss, it has
+        also spurred innovation, resilience, and a renewed commitment to building a healthier, more equitable world</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <form class="container">
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Enter Your Name">
+      <input type="email" placeholder="Enter Your Email">
+      <input type="text" placeholder="Enter Your Contact Number">
+      <textarea type="text" rows="8" placeholder="Enter Your Message"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+  <footer>Copyright &copy All rights are reserved 2024</footer>
+  <div id="notification-container" class="notification-container"></div>
+  </body>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="script.js"></script>
+</html>

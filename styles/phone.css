@@ -1,0 +1,62 @@
+*{
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    background:url("../img/bodybg.png") center center/cover no-repeat;
+}
+
+
+nav {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(300px);
+    overflow: hidden;
+    transition: height .5s ease;
+}
+
+/* menu functionality */
+header .menu{
+    display: block;
+}
+
+header #menu:checked ~ .menu ion-icon:nth-child(1){
+    display: none;
+}
+
+header #menu:checked + .menu ion-icon:nth-child(2){
+    display: block;
+}
+
+header .menu:nth-child(1){
+    display:block;
+}
+header .menu ion-icon:nth-child(2){
+    display: none;
+}
+
+header #menu:checked ~ nav{
+    height: 300px;
+}
+
+/* notification responsive */
+
+.notification-container {
+    top: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+}
+
+.notification {
+    width: 90vw;
+}

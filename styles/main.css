@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Thambi 2";
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:url("../img/bodybg.png") center center/cover no-repeat fixed;
+}
+
+header{
+    background-color:rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(100px);
+    position: sticky;
+    top: 0;
+    height: 100px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+header img{
+    position: absolute;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    z-index: 11;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav li{
+    padding: .5rem 1rem;
+    list-style: none;
+}
+
+header .menu{
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+header input#menu{
+    display: none;
+}
+
+nav li a{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: .5rem;
+    border-radius: 1rem;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color:black;
+    background-color: whitesmoke;
+}
+section#main{
+    border: .4rem solid white;
+    border-radius: 2rem;
+    height: 80vh;
+    width: 95vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+section#info{
+    border: .4rem solid white;
+    border-radius: 2rem;
+    height: 80vh;
+    width: 95vw;
+    margin: 5vh auto 1vh auto;
+    background-color: rgba(0, 0, 0, 0.8 );
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+}
+
+section#info h1{
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+    color: whitesmoke;
+    text-shadow: 2px 4px black;
+}
+
+.info{
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+section#info p{
+    text-align: center;
+    margin: 1rem;
+    color: whitesmoke;
+}
+
+.leaflet-control-attribution.leaflet-control,.leaflet-top.leaflet-left{
+    display: none;
+}
+
+section#contact{
+    border: .4rem solid white;
+    border-radius: 2rem;
+    height: max-content;
+    width: 95vw;
+    margin: 5vh auto 1vh auto;
+    background-color: rgba(0, 0, 0, 0.8 );
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#contact form.container{
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    width: 80vw;
+}
+
+form.container h2{
+    font-size: 2.5rem;
+    padding: 1rem;
+    font-weight: 900;
+}
+
+form.container input[type="text"],
+form.container input[type="email"],
+form.container textarea[type="text"]{
+    width: 90%;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem 0 0 0;
+    border: none;
+    border-bottom: 3px solid white;
+    outline: none;
+    text-align: center;
+    font-weight: 900;
+}
+
+form.container textarea[type="text"]{
+    backdrop-filter: blur(50px);
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+form.container input[type="submit"]{
+    padding: .5rem 1rem;
+    margin: 1rem 0 0 0;
+    background: transparent;
+    border-radius: 20px;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+form.container input[type="submit"]:hover{
+    background-color: white;
+    color: black;
+}
+form.container input[type="submit"]:active{
+    background-color: grey;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: .1rem;
+}
+
+/* notificaton styles */
+
+.notification-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.notification {
+    background:linear-gradient(to right,rgb(255, 0, 51,.6),rgb(163, 15, 15,.4));
+    backdrop-filter: blur(50px);
+    color: white;
+    padding: 16px;
+    margin: 5px 0;
+    position: relative;
+    transform: translateX(100%);
+    animation: slide-in 0.5s forwards;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+}
+
+.notification .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 16px; /* Space between close button and message */
+    cursor: pointer;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
