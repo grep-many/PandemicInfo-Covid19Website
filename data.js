@@ -1,4 +1,4 @@
-{
+const data = {
   "data": [
     {
       "id": "0GJcws44NSPsDHAuxJhW",

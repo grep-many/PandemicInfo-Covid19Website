@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Add the custom tile layer - where land is grey and water is black
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         minZoom: 1,
         noWrap: true // Prevent horizontal wrapping
     }).addTo(map);
@@ -91,39 +91,26 @@ document.addEventListener("DOMContentLoaded", function() {
         popupAnchor: [1, -34] // Point from which the popup should open relative to the iconAnchor
     });
 
-    // Update map with data from data.json
-    function updateMap() {
-        fetch("/data.json")
-        .then(response => response.json())
-        .then(data => {
-            // Add markers based on data from data.json
-            data.data.forEach((element, index) => {
-                setTimeout(() => {
-                    var latitude = element.latitude;
-                    var longitude = element.longitude;
-                    var name = element.name;
-                    var infected = element.infected;
-                    var dead = element.dead;
-                    var recovered = element.recovered;
-                    var sick = element.sick;
-                    var lastUpdated = element.lastUpdated.slice(0,10);
-                    
-                    console.log("Latitude:", latitude, "Longitude:", longitude); // Log coordinates
-                    
-                    // Mark on the map with red icon
-                    var marker = L.marker([latitude, longitude], { icon: redIcon }).addTo(map);
-                    console.log("Marker added:", marker); // Log marker addition
-                    
-                    // Add popup with name and other details
-                    marker.bindPopup(`<b>${name}</b><br>Infected: ${infected}<br>Deaths: ${dead}<br>Sicks: ${sick}<br>Recovered: ${recovered}<br><em>&nbsp&nbsp&nbsp&nbsp&nbspLast Updated: ${lastUpdated}</em>`);
-                }, index * 5); // Delay each marker by 2 seconds (2000 milliseconds)
-            });
-        }) 
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
-    }
-    
-    // Add markers based on data from data.json
-    updateMap();
+    data.data.forEach((element, index) => {
+        setTimeout(() => {
+            var latitude = element.latitude;
+            var longitude = element.longitude;
+            var name = element.name;
+            var infected = element.infected;
+            var dead = element.dead;
+            var recovered = element.recovered;
+            var sick = element.sick;
+            var lastUpdated = element.lastUpdated.slice(0,10);
+            
+            console.log("Latitude:", latitude, "Longitude:", longitude); // Log coordinates
+            
+            // Mark on the map with red icon
+            var marker = L.marker([latitude, longitude], { icon: redIcon }).addTo(map);
+            console.log("Marker added:", marker); // Log marker addition
+            
+            // Add popup with name and other details
+            marker.bindPopup(`<b>${name}</b><br>Infected: ${infected}<br>Deaths: ${dead}<br>Sicks: ${sick}<br>Recovered: ${recovered}<br><em>&nbsp&nbsp&nbsp&nbsp&nbspLast Updated: ${lastUpdated}</em>`);
+        }, index * 5); // Delay each marker by 2 seconds (2000 milliseconds)
+    });
+
 });
