@@ -24,7 +24,7 @@
     font-size: 1.2em;
 }
 
-#hero button {
+#hero .btn {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1em;
@@ -34,9 +34,10 @@
     border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-#hero button:hover {
+#hero .btn:hover {
     background: #e8f5e9;
     color: #000;
 }

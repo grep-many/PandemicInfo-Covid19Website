@@ -1,12 +1,13 @@
 import React from "react";
 import "./HeroSection.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const HeroSection = ({head,body,btn=false}) => {
   return (
     <section id="hero">
       <h1>{head}</h1>
       <p>{body}</p>
-      {btn&&<button onClick={() => window.location.href = '/about'}>Learn More</button>}
+      {btn&&<Link to='/about' className='btn'>Learn More</Link>}
     </section>
   );
 };
