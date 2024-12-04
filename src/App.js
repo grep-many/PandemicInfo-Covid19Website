@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <>
-      <Router basename="/pandemic-info">
+      <Router basename="/pandemic-info/">
         <Header />
         <Switch>
           <Route exact path="/"><Home/></Route>
