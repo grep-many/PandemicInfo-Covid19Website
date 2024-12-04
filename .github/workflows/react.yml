@@ -40,7 +40,6 @@ jobs:
       
       - name: Build the React app
         run: |
-          cd client  # Navigate to the client folder
           npm run build
       
       - name: Create 404.html for routing support
