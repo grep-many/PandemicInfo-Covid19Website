@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.css'
 import HeroSection from '../../components/HeroSection/HeroSection';
 import Team from '../../components/team/Team';
@@ -12,7 +12,6 @@ const About = () => {
 
   useEffect(() => {
     document.title = `PandemicInfo | About`;
-    fetchData();
   }, []);
 
   return (

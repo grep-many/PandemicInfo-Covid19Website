@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Contact.css'
 import HeroSection from '../../components/HeroSection/HeroSection';
 
@@ -12,7 +12,6 @@ const Contact = () => {
 
   useEffect(() => {
     document.title = `PandemicInfo | Contact`;
-    fetchData();
   }, []);
 
   return (

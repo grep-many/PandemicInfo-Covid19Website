@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Statistics from '../components/statistics/Statistics';
 import MapSection from '../components/mapSection/MapSection';
 import HeroSection from '../components/HeroSection/HeroSection';
@@ -12,7 +12,6 @@ const Home = () => {
 
   useEffect(() => {
     document.title = `PandemicInfo | Home`;
-    fetchData();
   }, []);
 
   return (
