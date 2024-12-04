@@ -1,0 +1,16 @@
+#mission {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#mission h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#mission p {
+  font-size: 1.2em;
+  margin-top: 20px;
+  line-height: 1.6;
+}

@@ -1,0 +1,68 @@
+/* Map Section */
+#map-container {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Statistics Section */
+#stats {
+    background: #e8f5e9;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap when needed */
+}
+
+.stat-item {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 25%; /* 30% width for each item */
+    min-width: 250px; /* Ensure a minimum width */
+    margin: 10px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design Fixes for Small Devices */
+@media (max-width: 768px) {
+    .stats-grid {
+        flex-direction: column; /* Stack items vertically on small devices */
+        align-items: center; /* Center the items */
+    }
+
+    .stat-item {
+        flex: 1 1 80%;  /* Take up 80% of the width on small screens */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+}
+
+/* Medium and Large Devices */
+@media (min-width: 769px) {
+    .stats-grid {
+        flex-direction: row; /* Arrange items in a row on larger devices */
+        justify-content: space-between;
+    }
+
+    .stat-item {
+        flex: 1 1 25%;  /* Each item takes 30% of the available space */
+        margin: 10px;
+    }
+}

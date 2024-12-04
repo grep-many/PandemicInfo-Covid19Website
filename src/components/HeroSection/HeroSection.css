@@ -1,0 +1,42 @@
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/public/assets/background.png') center center/cover no-repeat fixed; /* Your custom background image */
+    filter: blur(5px); /* Apply blur effect to the image */
+    z-index: -1; /* Make sure the image is behind the content */
+}
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+}
+
+#hero p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bolder;
+    background: transparent;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hero button:hover {
+    background: #e8f5e9;
+    color: #000;
+}
