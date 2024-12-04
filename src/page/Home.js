@@ -5,15 +5,20 @@ import HeroSection from '../components/HeroSection/HeroSection';
 
 const Home = () => {
 
-  const {head,body} = {
-    head:'Stay Informed. Stay Safe.',
-    body:'Your one-stop source for COVID-19 updates, live maps, and essential information to keep you and your loved ones protected.'
+  const { head, body } = {
+    head: 'Stay Informed. Stay Safe.',
+    body: 'Your one-stop source for COVID-19 updates, live maps, and essential information to keep you and your loved ones protected.'
   }
+
+  useEffect(() => {
+    document.title = `PandemicInfo | Home`;
+    fetchData();
+  }, []);
 
   return (
     <>
-      <HeroSection head={head} body={body} btn={true}/>
-      <MapSection/>
+      <HeroSection head={head} body={body} btn={true} />
+      <MapSection />
       <Statistics />
     </>
   );

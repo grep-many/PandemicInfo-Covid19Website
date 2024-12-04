@@ -9,6 +9,12 @@ const About = () => {
     body: 'Your trusted source for global pandemic information, offering real-time updates, maps, and essential resources to keep you and your loved ones safe.'
   }
 
+
+  useEffect(() => {
+    document.title = `PandemicInfo | About`;
+    fetchData();
+  }, []);
+
   return (
     <>
       <HeroSection head={head} body={body} />

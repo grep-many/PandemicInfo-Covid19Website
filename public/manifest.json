@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PandemicInfo",
+  "name": "PandemicInfo | Updates on the Covid",
   "icons": [
     {
       "src": "favicon.ico",
