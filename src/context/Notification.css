@@ -1,0 +1,75 @@
+.notification-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+}
+
+.notification {
+    background: linear-gradient(to right, rgba(255, 0, 51, 0.6), rgba(163, 15, 15, 0.4));
+    backdrop-filter: blur(50px);
+    color: white;
+    padding: 16px;
+    margin: 5px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    transform: translateX(100%);
+    animation: slide-in 0.5s forwards;
+}
+
+.notification.slide-in {
+    animation: slide-in 0.5s forwards;
+}
+
+.notification.slide-out {
+    animation: slide-out 0.5s forwards;
+}
+
+.notification .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 1300px) {
+    .notification-container {
+        top: 0;
+        right: 0;
+        width: fit-content;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .notification {
+        width: 90vw;
+    }
+}

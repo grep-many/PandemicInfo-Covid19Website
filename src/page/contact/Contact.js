@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Contact.css'
 import HeroSection from '../../components/HeroSection/HeroSection';
+import { useNotification } from '../../context/NotificationContext';
 
 
 const Contact = () => {
@@ -10,9 +11,16 @@ const Contact = () => {
     body: "If you have any questions or need assistance, don't hesitate to contact us. We're here to help!",
   }
 
+  const {addNotification} = useNotification();
+
   useEffect(() => {
     document.title = `PandemicInfo | Contact`;
   }, []);
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    addNotification('This is a static site!')
+  }
 
   return (
     <>
@@ -20,7 +28,7 @@ const Contact = () => {
 
       <section id="contact-form">
         <h2>Contact Form</h2>
-        <form onSubmit={(e) => { e.preventDefault(); alert('Static site') }}>
+        <form onSubmit={handleSubmit}>
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" />
